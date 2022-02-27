@@ -5,6 +5,6 @@ create table employee (
     primary key (id)
 );
 
-insert into employee (first_name, last_name) values ('jon', 'great');
-insert into employee (first_name, last_name) values ('david', 'cool');
-insert into employee (first_name, last_name) values ('aaron', 'daxter');
+-- insert into employee (first_name, last_name) values ('jon', 'great');
+-- insert into employee (first_name, last_name) values ('david', 'cool');
+-- insert into employee (first_name, last_name) values ('aaron', 'daxter');

@@ -3,6 +3,7 @@ spring:
     vault:
       application-name: springboot-vault-app
       token: default-root-token
+      host: vault
       scheme: http
       kv:
         enabled: true

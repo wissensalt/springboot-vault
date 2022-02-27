@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-docker-compose down && docker image rm springboot-vault_service
+docker-compose down
+
+docker image rm springboot-vault_service

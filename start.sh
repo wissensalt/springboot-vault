@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
 
-./gradlew clean build && docker-compose up --build -d
+docker-compose down
+
+docker-compose up --build -d vault
+
+sh ./setup-vault.sh
+
+./gradlew clean build
+
+docker-compose up --build -d service
+
+exit 1
