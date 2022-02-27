@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  vault:
+    image: vault:latest
+    container_name: vault
+    ports:
+      - 8200:8200
+    environment:
+      VAULT_ADDR: "http://0.0.0.0:8200"
+      VAULT_DEV_ROOT_TOKEN_ID: "default-root-token"
+    cap_add:
+        - IPC_LOCK
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    depends_on:
+      - vault
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employee_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+  service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: service
+    links:
+      - vault
+      - mysql

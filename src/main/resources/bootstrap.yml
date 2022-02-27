@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    vault:
+      application-name: springboot-vault-app
+      token: default-root-token
+      scheme: http
+      kv:
+        enabled: true
+      database:
+        enabled: true
+        role: app-role
