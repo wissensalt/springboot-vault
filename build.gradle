@@ -30,6 +30,7 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-vault-config-databases'
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 	implementation 'org.flywaydb:flyway-core:7.15.0'
+	implementation 'com.github.javafaker:javafaker:1.0.2'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'

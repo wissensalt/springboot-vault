@@ -62,4 +62,4 @@ docker-compose exec vault apk --no-cache add jq
 # Create Token with policy springboot-vault
 VAULT_TOKEN=$(docker-compose exec vault /bin/vault token create -format=json -policy=app-encryption | jq -r ".auth.client_token")
 
-echo $VAULT_TOKEN
+echo 'Generated Vault Token : '${VAULT_TOKEN}

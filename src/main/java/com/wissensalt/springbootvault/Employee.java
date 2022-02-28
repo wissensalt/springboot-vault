@@ -25,9 +25,11 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name")
-    @Convert(converter = EmployeeNameConverter.class)
     private String firstName;
 
     private String lastName;
+
+    @Column(name = "identity_number")
+    @Convert(converter = IdentityNumberConverter.class)
+    private String identityNumber;
 }
